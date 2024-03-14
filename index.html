@@ -67,10 +67,17 @@
                     <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
                     <li><a class="smoothscroll"  href="#feedback" title="feedback">Feedback</a></li>
                 </ul>
-                <audio controls autoplay>
-                    <source src="gg.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+            <audio id="myAudio">
+                <source src="your_song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <script>
+                window.onload = function() {
+                    var audio = document.getElementById("myAudio");
+                    audio.play();
+                };
+            </script>
                 <ul class="header-nav__social">
                     <li>
                         <a href="https://www.facebook.com/people/Silver-Oaks-Y/61555970140691/"><i class="fab fa-facebook"></i></a>
@@ -92,12 +99,7 @@
 
     <!-- home
     ================================================== -->
-    <div class="col-six tab-full">
-        <div class="alert-box alert-box--info hideit">
-            <p>Audio is now being autoplayed, go to the menu to stop it.</p>
-            <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
-        </div><!-- /info -->
-    </div>
+
     <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-position-y=center>
 
         <div class="grid-overlay">
@@ -105,6 +107,13 @@
         </div>
 
         <div class="home-content">
+            <div class="col-six tab-full">
+                <br>
+            
+                <div class="alert-box alert-box--info hideit">
+                    <p>Audio is being autoplayed, go to the menu to stop it.</p>
+                    <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                </div><!-- /error -->
 
             <div class="row home-content__main">
 
